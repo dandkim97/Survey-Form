@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Survey Form </title>
+</head>
+
+<style>
+
+  body{
+    background-color: #BAF4CC;
+    text-align: center;
+    min-width: 320px;
+  }
+
+  ul{
+    padding-left: 10px;
+  }
+
+  #page{
+    background-color: white;
+    margin: 0 auto;
+    padding: 10px;
+    padding-top: 20px;
+    border-radius: 5px;
+    width: 75%;
+    max-width: 900px;
+  }
+
+  #survey-form{
+    background-color: white;
+  }
+
+  #dropdown{
+    width: 40%;
+  }
+
+  .row{
+    padding: 20px;
+  }
+
+  .labels{
+    display: inline-block;
+    width: 40%;
+    text-align: right;
+    align-items:stretch;
+    vertical-align: top;
+    padding: 4px;
+  }
+
+  .inputs{
+    display: inline-block;
+    width: 48%;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  .input-field{
+    width: 80%;
+  }
+
+  textarea{
+    width: 100%;
+    min-height: 50px;
+    resize: vertical;
+  }
+
+</style>
+
+
+<body>
+
+  <header>
+    <h1 id="title"> TITLE </h1>
+  </header>
+
+  <div id="page">
+    <p id="description"> description</p>
+
+      <form id="survey-form">
+
+        <div class="row">
+          <div class="labels">
+            <label for="name" id="name-label">* Name:</label>
+          </div>
+          <div class="inputs">
+            <input type="text" class="input-field" id="name" placeholder="Enter your name" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="labels">
+            <label for="email" id="email-label">* Email:</label>
+          </div>
+          <div class="inputs">
+            <input type="email" class="input-field" id="email" placeholder="Enter your email" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="labels">
+            <label for="number" id="number-label" class="labels">* Age:</label>
+          </div>
+          <div class="inputs">
+            <input type="number" class="input-field"  id="number" placeholder="Age" min=0 max=100 required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="labels">
+            <label for="dropdown" class="labels">Gender: </label>
+          </div>
+          <div class="inputs">
+            <select id="dropdown">
+              <option disabled selected value>Pick an option</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="NonBinary">NonBinary</option>
+              <option value="Prefer not to say">Prefer not to say</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="labels">
+            <label for="radio" class="labels">How are you?</label>
+          </div>
+          <div class="inputs">
+            <ul style="list-style: none;">
+              <li><input type="radio" name="radio" id="radio" value="1">Great!<br></li>
+              <li><input type="radio" name="radio" id="radio" value="2">Good<br></li>
+              <li><input type="radio" name="radio" id="radio" value="3">Okay...</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="labels">
+            <label for="checkbox" class="labels">What colors do you like?<br>(Select all that apply):</label>
+          </div>
+          <div class="inputs">
+            <ul style="list-style: none;">
+              <li><input type="checkbox" id="checkbox" value="Red">Red<br></li>
+              <li><input type="checkbox" id="checkbox" value="Green">Green<br></li>
+              <li><input type="checkbox" id="checkbox" value="Blue">Blue<br></li>
+              <li><input type="checkbox" id="checkbox" value="Yellow">Yellow</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="labels">
+            <label for="textarea" class="labels">If want to ramble go ahead:</label>
+          </div>
+          <div class="inputs">
+            <textarea id="textarea" placeholder="Ramble all you like here..." ></textarea>
+          </div>
+        </div>
+
+        <div class="row">
+          <input type="submit" id="submit"></div>
+        </div>
+
+
+      </form>
+
+  </div>
+
+</body>
+
+
+</html>
